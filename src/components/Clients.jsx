@@ -57,11 +57,11 @@ const DaveJonesLogo = () => (
 );
 
 const clients = [
-    { type: 'svg', component: Bar121Logo },
-    { type: 'svg', component: HunterLogo },
-    { type: 'svg', component: LocoGraphicsLogo },
-    { type: 'svg', component: MidDreamsLogo },
-    { type: 'svg', component: DaveJonesLogo }
+    { type: 'svg', component: Bar121Logo, name: 'Bar 121' },
+    { type: 'svg', component: HunterLogo, name: 'Hunter' },
+    { type: 'svg', component: LocoGraphicsLogo, name: 'Loco Graphics' },
+    { type: 'svg', component: MidDreamsLogo, name: 'Mid Dreams' },
+    { type: 'svg', component: DaveJonesLogo, name: 'Dave Jones' }
 ];
 
 const Clients = () => {
@@ -72,8 +72,8 @@ const Clients = () => {
                 <hr className="mx-auto mb-12" />
                 <div className="flex flex-col md:flex-row justify-between items-center w-full px-2 md:px-0 gap-8 md:gap-0">
                     {clients.map((client, i) => (
-                        <div key={i} className="flex items-center justify-center px-4">
-                            <div className="h-4 md:h-6 w-auto [&>svg]:h-full [&>svg]:w-auto">
+                        <div key={i} className="flex items-center justify-center px-4" aria-label={`${client.name} logo`}>
+                            <div className="h-4 md:h-6 w-auto [&>svg]:h-full [&>svg]:w-auto" role="img" aria-label={client.name}>
                                 <client.component />
                             </div>
                         </div>

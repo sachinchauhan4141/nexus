@@ -68,6 +68,8 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         name="first_name"
+                                        autocomplete="given-name"
+                                        aria-required="false"
                                         className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium"
                                     />
                                 </div>
@@ -76,6 +78,8 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         name="last_name"
+                                        autocomplete="family-name"
+                                        aria-required="false"
                                         className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium"
                                     />
                                 </div>
@@ -86,7 +90,9 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     name="email"
+                                    autocomplete="email"
                                     required
+                                    aria-required="true"
                                     className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium"
                                 />
                             </div>
@@ -96,6 +102,7 @@ const Contact = () => {
                                 <textarea
                                     name="message"
                                     rows="1" // Starts as a line
+                                    aria-required="false"
                                     className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium resize-none"
                                 ></textarea>
                             </div>
@@ -108,8 +115,10 @@ const Contact = () => {
                                 {status === 'sending' ? 'Sending...' : 'Submit'}
                             </button>
 
-                            {status === 'success' && <p className="text-green-600 mt-4">Message sent!</p>}
-                            {status === 'error' && <p className="text-red-500 mt-4">Error sending message.</p>}
+                            <div aria-live="polite">
+                                {status === 'success' && <p className="text-green-600 mt-4">Message sent!</p>}
+                                {status === 'error' && <p className="text-red-500 mt-4">Error sending message.</p>}
+                            </div>
                         </form>
                     </div>
                 </div>

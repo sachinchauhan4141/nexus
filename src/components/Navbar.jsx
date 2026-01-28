@@ -67,6 +67,9 @@ const Navbar = () => {
                 <button
                     className="lg:hidden text-secondary z-10"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isOpen}
+                    aria-controls="mobile-menu"
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
@@ -76,6 +79,7 @@ const Navbar = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
+                        id="mobile-menu"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}

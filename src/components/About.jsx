@@ -47,7 +47,8 @@ const About = () => {
                 <div className="relative w-full h-[400px] md:h-auto overflow-hidden">
                     <motion.img
                         src={aboutImage}
-                        alt="About Us"
+                        alt="Our professional team working on digital marketing strategies"
+                        loading="lazy"
                         style={{ y }}
                         className="w-full h-[120%] object-cover object-left-bottom"
                     />
