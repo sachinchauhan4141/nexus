@@ -50,7 +50,7 @@ const Services = () => {
         <section id="services" className="py-16 md:py-24 bg-white relative">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="text-center mb-16 md:mb-20">
-                    <h4 className="text-primary font-avenir-heavy tracking-widest mb-2 uppercase text-[12px] md:text-[14px]">What's In BOX For You?</h4>
+                    <h4 className="text-primary font-avenir-heavy font-bold tracking-widest mb-2 uppercase text-[16px] md:text-[14px]">What's In BOX For You?</h4>
                     <h2 className="text-[28px] md:text-section-h2 text-secondary font-worksans leading-tight">
                         Taking Your Business to<br className="hidden md:block" /> the Next Level
                     </h2>

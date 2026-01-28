@@ -40,7 +40,7 @@ const Testimonials = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6 }}
-                    className="font-avenir-heavy tracking-widest uppercase mb-8 text-[14px]"
+                    className="font-avenir-heavy font-bold tracking-widest uppercase mb-8 text-[14px]"
                 >
                     Trusted by
                 </motion.h4>

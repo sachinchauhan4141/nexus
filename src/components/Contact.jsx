@@ -41,7 +41,7 @@ const Contact = () => {
 
                     {/* Left Info */}
                     <div className="text-center md:text-left">
-                        <h4 className="text-primary font-avenir-heavy tracking-widest uppercase mb-4 text-[12px] md:text-[14px]">CONTACT</h4>
+                        <h4 className="text-primary font-avenir-heavy font-bold tracking-widest uppercase mb-4 text-[16px] md:text-[14px]">CONTACT</h4>
                         <h2 className="text-[28px] md:text-section-h2 text-secondary mb-8">Let's Work Together</h2>
 
                         <div className="text-secondary font-avenir-light mb-8 space-y-2 text-[18px]">

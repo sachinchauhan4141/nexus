@@ -40,16 +40,16 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-white/30 z-0"></div>
             </motion.div>
 
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div className="max-w-[1050px]">
+            <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="max-w-[1050px] flex flex-col">
                     {/* Text Content */}
-                    <div>
+                    <div className="flex flex-col">
                         <motion.h1
                             custom={1}
                             initial="hidden"
                             animate="visible"
                             variants={slideUp}
-                            className="text-[42px] md:text-[65px] text-secondary mb-6 md:mb-6 mt-10 md:mt-0 tracking-tight md:tracking-normal font-worksans leading-[1.1] md:leading-[1.1] font-bold"
+                            className="text-[42px] md:text-[65px] text-secondary mb-6 md:mb-6 mt-2 md:mt-0 tracking-tight md:tracking-normal font-worksans leading-[1.1] md:leading-[1.1] font-bold order-2 md:order-1"
                         >
                             Realise the full digital potential of your brand
                         </motion.h1>
@@ -59,7 +59,7 @@ const Hero = () => {
                             initial="hidden"
                             animate="visible"
                             variants={slideUp}
-                            className="text-[18px] md:text-hero-sub text-secondary/80 mb-8 md:mb-10 max-w-lg md:max-w-[465px] font-avenir-light leading-relaxed"
+                            className="text-[18px] md:text-hero-sub text-secondary/80 mb-2 md:mb-10 mt-12 md:mt-0 max-w-lg md:max-w-[465px] font-avenir-light leading-relaxed mx-auto md:mx-0 order-1 md:order-2"
                         >
                             Solve your toughest marketing challenges and drive exceptional business results leveraging our unique expertise.
                         </motion.p>
@@ -70,6 +70,7 @@ const Hero = () => {
                         initial="hidden"
                         animate="visible"
                         variants={slideUp}
+                        className="order-3"
                     >
                         <a
                             href="#contact"

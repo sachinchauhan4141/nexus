@@ -21,9 +21,9 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="flex flex-col justify-center px-6 md:px-12 lg:pr-32 lg:pl-16 py-16 md:py-24"
+                    className="flex flex-col justify-center items-center text-center md:items-start md:text-left px-6 md:px-12 lg:pr-32 lg:pl-16 py-16 md:py-24"
                 >
-                    <h4 className="text-primary font-avenir-heavy tracking-widest uppercase mb-4 text-[12px] md:text-[14px]">ABOUT</h4>
+                    <h4 className="text-primary font-avenir-heavy font-bold tracking-widest uppercase mb-4 text-[16px] md:text-[14px]">ABOUT</h4>
                     <h2 className="text-[28px] md:text-section-h2 text-secondary font-sans mb-6 md:mb-8 leading-tight">
                         Our Experts Are<br /> the Finest
                     </h2>
