@@ -40,9 +40,9 @@ const Contact = () => {
                 <div className="grid md:grid-cols-[0.4fr_0.6fr] gap-12 md:gap-24">
 
                     {/* Left Info */}
-                    <div>
-                        <h4 className="text-primary font-avenir-heavy tracking-widest uppercase mb-4 text-[14px]">CONTACT</h4>
-                        <h2 className="text-section-h2 text-secondary mb-8">Let's Work Together</h2>
+                    <div className="text-center md:text-left">
+                        <h4 className="text-primary font-avenir-heavy tracking-widest uppercase mb-4 text-[12px] md:text-[14px]">CONTACT</h4>
+                        <h2 className="text-[28px] md:text-section-h2 text-secondary mb-8">Let's Work Together</h2>
 
                         <div className="text-secondary font-avenir-light mb-8 space-y-2 text-[18px]">
                             <p>2nd Floor, Plot no A-41,</p>
@@ -62,9 +62,9 @@ const Contact = () => {
                     {/* Right Form - Line Inputs */}
                     <div>
                         <form ref={form} onSubmit={sendEmail} className="space-y-8">
-                            <div className="grid grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="group relative">
-                                    <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide font-avenir-heavy">First Name</label>
+                                    <label className="block text-[10px] md:text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide font-avenir-heavy">First Name</label>
                                     <input
                                         type="text"
                                         name="first_name"
@@ -72,7 +72,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className="group relative">
-                                    <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide font-avenir-heavy">Last Name</label>
+                                    <label className="block text-[10px] md:text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide font-avenir-heavy">Last Name</label>
                                     <input
                                         type="text"
                                         name="last_name"
@@ -103,7 +103,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={status === 'sending'}
-                                className="px-12 py-3 bg-[#9E3FFD] text-white rounded-full text-[16px] shadow-lg hover:opacity-90 transition-all mt-8 font-avenir-heavy"
+                                className="w-full md:w-auto px-12 py-3 bg-[#9E3FFD] text-white rounded-full text-[16px] shadow-lg hover:opacity-90 transition-all mt-8 font-avenir-heavy"
                             >
                                 {status === 'sending' ? 'Sending...' : 'Submit'}
                             </button>

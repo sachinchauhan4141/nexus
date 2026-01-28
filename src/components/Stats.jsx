@@ -10,9 +10,9 @@ const stats = [
 
 const Stats = () => {
     return (
-        <section className="py-20 bg-[#16163F] text-white">
+        <section className="py-16 md:py-20 bg-[#16163F] text-white">
             <div className="container mx-auto px-6 md:px-12 text-center">
-                <h2 className="text-2xl md:text-4xl font-bold mb-16">We're Good with Numbers</h2>
+                <h2 className="text-[28px] md:text-4xl font-bold mb-12 md:mb-16">We're Good with Numbers</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 items-center">
                     {stats.map((stat, index) => (
@@ -24,8 +24,8 @@ const Stats = () => {
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                             className="relative"
                         >
-                            <h3 className="text-stat-num font-sans mb-2">{stat.value}</h3>
-                            <p className="text-gray-400 text-stat-label font-avenir-light uppercase tracking-[1.6px]">{stat.label}</p>
+                            <h3 className="text-[40px] md:text-stat-num font-sans mb-2 leading-none">{stat.value}</h3>
+                            <p className="text-gray-400 text-[14px] md:text-stat-label font-avenir-light uppercase tracking-[1.6px] px-8 md:px-0">{stat.label}</p>
 
                             {/* Separator dot for desktop, except last item */}
                             {index !== stats.length - 1 && (

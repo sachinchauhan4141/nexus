@@ -41,15 +41,15 @@ const Hero = () => {
             </motion.div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div>
+                <div className="max-w-[1050px]">
                     {/* Text Content */}
-                    <div className="block">
+                    <div>
                         <motion.h1
                             custom={1}
                             initial="hidden"
                             animate="visible"
                             variants={slideUp}
-                            className="text-[32px] md:text-[65px] md:max-w-[1050px] text-secondary mb-6 md:mb-6 mt-6 md:mt-0 tracking-normal font-worksans leading-[1.15] md:leading-[1.1] font-bold"
+                            className="text-[42px] md:text-[65px] text-secondary mb-6 md:mb-6 mt-10 md:mt-0 tracking-tight md:tracking-normal font-worksans leading-[1.1] md:leading-[1.1] font-bold"
                         >
                             Realise the full digital potential of your brand
                         </motion.h1>
@@ -59,7 +59,7 @@ const Hero = () => {
                             initial="hidden"
                             animate="visible"
                             variants={slideUp}
-                            className="text-[16px] md:text-hero-sub text-secondary mb-4 md:mb-10 max-w-lg md:max-w-[465px] font-avenir-light leading-relaxed"
+                            className="text-[18px] md:text-hero-sub text-secondary/80 mb-8 md:mb-10 max-w-lg md:max-w-[465px] font-avenir-light leading-relaxed"
                         >
                             Solve your toughest marketing challenges and drive exceptional business results leveraging our unique expertise.
                         </motion.p>

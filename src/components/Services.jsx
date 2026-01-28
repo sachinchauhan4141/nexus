@@ -47,11 +47,11 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="py-24 bg-white relative">
+        <section id="services" className="py-16 md:py-24 bg-white relative">
             <div className="container mx-auto px-6 md:px-12">
-                <div className="text-center mb-20">
-                    <h4 className="text-primary font-avenir-heavy tracking-widest mb-2 uppercase text-[14px]">What's In BOX For You?</h4>
-                    <h2 className="text-section-h2 text-secondary font-worksans leading-tight">
+                <div className="text-center mb-16 md:mb-20">
+                    <h4 className="text-primary font-avenir-heavy tracking-widest mb-2 uppercase text-[12px] md:text-[14px]">What's In BOX For You?</h4>
+                    <h2 className="text-[28px] md:text-section-h2 text-secondary font-worksans leading-tight">
                         Taking Your Business to<br className="hidden md:block" /> the Next Level
                     </h2>
                 </div>
@@ -66,11 +66,11 @@ const Services = () => {
                             transition={{ delay: index * 0.2, duration: 0.6 }}
                             className="flex flex-col items-center max-w-[300px] mx-auto"
                         >
-                            <div className="mb-6 w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center">
+                            <div className="mb-6 w-20 h-20 md:w-24 md:h-24 bg-purple-50 rounded-full flex items-center justify-center">
                                 {service.icon}
                             </div>
-                            <h3 className="text-card-title text-secondary mb-4 font-avenir-heavy">{service.title}</h3>
-                            <p className="text-card-desc text-secondary leading-[1.5] font-avenir-light">
+                            <h3 className="text-card-title text-secondary mb-3 md:mb-4 font-avenir-heavy">{service.title}</h3>
+                            <p className="text-[16px] md:text-card-desc text-secondary/80 leading-[1.6] font-avenir-light">
                                 {service.description}
                             </p>
                         </motion.div>

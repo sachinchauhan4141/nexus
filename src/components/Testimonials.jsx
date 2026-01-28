@@ -54,16 +54,16 @@ const Testimonials = () => {
                         <motion.div
                             key={activeIndex}
                             variants={{
-                                enter: { x: 50, opacity: 0 },
-                                center: { x: 0, opacity: 1 },
-                                exit: { x: -50, opacity: 0 }
+                                enter: { opacity: 0, scale: 0.95 },
+                                center: { opacity: 1, scale: 1 },
+                                exit: { opacity: 0, scale: 1.05 }
                             }}
                             initial="enter"
                             animate="center"
                             exit="exit"
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                         >
-                            <h2 className="text-quote font-avenir-heavy mb-12">
+                            <h2 className="text-[20px] md:text-quote font-avenir-heavy mb-8 md:mb-12 px-2 md:px-0">
                                 "{testimonials[activeIndex].quote}"
                             </h2>
 

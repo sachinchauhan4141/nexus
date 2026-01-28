@@ -17,18 +17,18 @@ const About = () => {
             <div className="grid md:grid-cols-2 min-h-[600px]">
                 {/* Left: Text Content */}
                 <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="flex flex-col justify-center px-6 md:px-12 lg:pr-32 lg:pl-16 py-16 md:py-24"
                 >
-                    <h4 className="text-primary font-avenir-heavy tracking-widest uppercase mb-4 text-[14px]">ABOUT</h4>
-                    <h2 className="text-section-h2 text-secondary font-sans mb-8 leading-tight">
+                    <h4 className="text-primary font-avenir-heavy tracking-widest uppercase mb-4 text-[12px] md:text-[14px]">ABOUT</h4>
+                    <h2 className="text-[28px] md:text-section-h2 text-secondary font-sans mb-6 md:mb-8 leading-tight">
                         Our Experts Are<br /> the Finest
                     </h2>
 
-                    <div className="text-secondary space-y-6 font-avenir-light text-section-p">
+                    <div className="text-secondary/80 space-y-5 md:space-y-6 font-avenir-light text-[16px] md:text-section-p">
                         <p>
                             Our tight-knit team consists of enthusiastic and dedicated professionals who are passionate about what they do.
                             We have a wide range of marketing and technical expertise.

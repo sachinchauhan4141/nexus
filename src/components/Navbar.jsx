@@ -72,20 +72,43 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col gap-6 border-t border-gray-100 animate-in slide-in-from-top-5">
-                    {navLinks.map((link) => (
+            <div
+                className={`lg:hidden fixed inset-0 z-40 transition-all duration-500 ease-in-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                    }`}
+            >
+                {/* Backdrop Overlay */}
+                <div
+                    className="absolute inset-0 bg-secondary/20 backdrop-blur-sm"
+                    onClick={() => setIsOpen(false)}
+                />
+
+                {/* Menu Content */}
+                <div
+                    className={`absolute right-0 top-0 h-full w-[75%] max-w-[300px] bg-white shadow-2xl flex flex-col py-24 px-8 gap-8 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                        }`}
+                >
+                    {navLinks.map((link, index) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className={`${activeSection === link.name ? 'text-primary' : 'text-secondary'} font-avenir-light text-xl tracking-wide font-normal`}
+                            className={`${activeSection === link.name ? 'text-primary' : 'text-secondary'} font-avenir-heavy text-xl tracking-wide transition-all duration-300 transform ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
+                                }`}
+                            style={{ transitionDelay: `${index * 50}ms` }}
                             onClick={() => setIsOpen(false)}
                         >
                             {link.name}
                         </a>
                     ))}
+
+                    <a
+                        href="#contact"
+                        className="mt-4 inline-block w-full h-[50px] leading-[50px] text-center bg-primary text-white rounded-full text-[16px] font-avenir-heavy shadow-md"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Get Started
+                    </a>
                 </div>
-            )}
+            </div>
         </nav>
     );
 };
