@@ -3,17 +3,12 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import aboutImage from '../assets/about_right.avif';
 
 const About = () => {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-    });
-
-    // Parallax effect: image moves slower than scroll
-    const y = useTransform(scrollYProgress, [0, 1], ['-30%', '50%']);
+    const { scrollY } = useScroll();
+    // Simplified window scroll tracking for stability
+    const y = useTransform(scrollY, [500, 2000], ['-20%', '40%']);
 
     return (
-        <section id="about" className="bg-white overflow-hidden" ref={ref}>
+        <section id="about" className="relative bg-white overflow-hidden">
             <div className="grid md:grid-cols-2 min-h-[600px]">
                 {/* Left: Text Content */}
                 <motion.div

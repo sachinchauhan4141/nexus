@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 /* Mapping the specific Wix/User requested font names to available resources */
 
@@ -12,19 +12,8 @@
   font-style: normal;
 }
 
-/* 2. Avenir Light (User ID: avenir-lt-w01_35-light1475496) */
-@font-face {
-  font-family: 'avenir-lt-w01_35-light1475496';
-  src: local('Avenir Light'), local('Avenir-Light'),
-    url(https://db.onlinewebfonts.com/t/2c8e31c77855217415256e2938174578.woff2) format('woff2');
-}
-
-/* 3. Avenir Heavy (User ID: avenir-lt-w01_85-heavy1475544) */
-@font-face {
-  font-family: 'avenir-lt-w01_85-heavy1475544';
-  src: local('Avenir Heavy'), local('Avenir-Heavy'),
-    url(https://db.onlinewebfonts.com/t/04213421d09ee93bf4097e344155160b.woff2) format('woff2');
-}
+/* 2. Montserrat (Consistent & Reliable Alternative to Avenir) */
+/* Already imported via Google Fonts at the top */
 
 @tailwind base;
 @tailwind components;
@@ -35,8 +24,8 @@ html {
 }
 
 body {
-  font-family: 'avenir-lt-w01_35-light1475496', 'worksans-semibold', sans-serif;
-  /* Default body font */
+  font-family: 'Montserrat', 'worksans-semibold', sans-serif;
+  /* Default body font using a stable Google Font alternative */
   color: #16163F;
 }
 

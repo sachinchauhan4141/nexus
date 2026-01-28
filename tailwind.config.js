@@ -12,10 +12,10 @@ export default {
         light: '#F4F7FB',     // Very Light Grey-Blue
       },
       fontFamily: {
-        // Exact names requested by user
+        // Exact names requested by user with reliable fallbacks
         'worksans': ['"worksans-semibold"', '"work sans"', 'sans-serif'],
-        'avenir-light': ['"avenir-lt-w01_35-light1475496"', 'sans-serif'],
-        'avenir-heavy': ['"avenir-lt-w01_85-heavy1475544"', 'sans-serif'],
+        'avenir-light': ['Montserrat', 'sans-serif'],
+        'avenir-heavy': ['Montserrat', 'sans-serif'],
         // Mapping default sans to the primary font
         sans: ['"worksans-semibold"', '"work sans"', 'sans-serif'],
       },

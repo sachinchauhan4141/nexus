@@ -68,7 +68,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         name="first_name"
-                                        autocomplete="given-name"
+                                        autoComplete="given-name"
                                         aria-required="false"
                                         className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium"
                                     />
@@ -78,7 +78,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         name="last_name"
-                                        autocomplete="family-name"
+                                        autoComplete="family-name"
                                         aria-required="false"
                                         className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium"
                                     />
@@ -90,7 +90,7 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     name="email"
-                                    autocomplete="email"
+                                    autoComplete="email"
                                     required
                                     aria-required="true"
                                     className="w-full py-2 border-b border-gray-400 focus:border-secondary outline-none transition-colors bg-transparent font-avenir-normal text-secondary font-medium"

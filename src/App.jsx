@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="font-sans text-secondary antialiased scroll-smooth">
       <Navbar />
-      <main>
+      <main className="relative">
         <Hero />
         <Services />
         <Stats />

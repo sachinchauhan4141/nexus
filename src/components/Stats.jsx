@@ -10,7 +10,7 @@ const stats = [
 
 const Stats = () => {
     return (
-        <section className="py-16 md:py-20 bg-[#16163F] text-white">
+        <section className="relative py-16 md:py-20 bg-[#16163F] text-white">
             <div className="container mx-auto px-6 md:px-12 text-center">
                 <h2 className="text-[28px] md:text-4xl font-bold mb-12 md:mb-16">We're Good with Numbers</h2>
 
