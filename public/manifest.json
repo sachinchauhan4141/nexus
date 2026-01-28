@@ -1,0 +1,9 @@
+{
+    "short_name": "NEXUS",
+    "name": "NEXUS Digital Potential",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#9E3FFD",
+    "background_color": "#ffffff"
+}
