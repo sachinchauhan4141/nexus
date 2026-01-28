@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-white/70 backdrop-blur-md shadow-sm' : 'py-8 bg-transparent'}`}
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-white/90 backdrop-blur-md shadow-sm' : 'py-8 bg-transparent'}`}
         >
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center text-sm font-medium relative">
                 {/* Logo */}
@@ -72,20 +73,40 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col gap-6 border-t border-gray-100 animate-in slide-in-from-top-5">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className={`${activeSection === link.name ? 'text-primary' : 'text-secondary'} font-avenir-light text-xl tracking-wide font-normal`}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                        className="lg:hidden fixed inset-0 w-full h-screen bg-white z-[100] flex flex-col items-center justify-center gap-10"
+                    >
+                        {/* Close button inside menu */}
+                        <button
+                            className="absolute top-8 right-6 text-secondary"
                             onClick={() => setIsOpen(false)}
                         >
-                            {link.name}
-                        </a>
-                    ))}
-                </div>
-            )}
+                            <X size={32} />
+                        </button>
+
+                        {navLinks.map((link, index) => (
+                            <motion.a
+                                key={link.name}
+                                href={link.href}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.05 + 0.2 }}
+                                className={`${activeSection === link.name ? 'text-primary' : 'text-secondary'
+                                    } font-avenir-light text-[22px] md:text-5xl tracking-tight transition-colors font-light duration-300`}
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {link.name}
+                            </motion.a>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 };
