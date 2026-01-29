@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -11,16 +10,24 @@ const Contact = () => {
         e.preventDefault();
         setStatus('sending');
 
-        const serviceId = "service_0u87cun";
-        const templateId = "template_675slhw";
-        const publicKey = "IQVL8sHRO218k1NrG";
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_0u87cun";
+        const adminTemplateId = import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID || "template_675slhw";
+        const userTemplateId = import.meta.env.VITE_EMAILJS_USER_TEMPLATE_ID || "template_675slhw";
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "IQVL8sHRO218k1NrG";
 
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+        // Send to Admin
+        const adminPromise = emailjs.sendForm(serviceId, adminTemplateId, form.current, publicKey);
+
+        // Send to User
+        const userPromise = emailjs.sendForm(serviceId, userTemplateId, form.current, publicKey);
+
+        Promise.all([adminPromise, userPromise])
             .then(() => {
                 setStatus('success');
                 e.target.reset();
-            }, (error) => {
-                console.log(error.text);
+            })
+            .catch((error) => {
+                console.error('EmailJS Error:', error);
                 setStatus('error');
             });
     };
@@ -47,16 +54,12 @@ const Contact = () => {
                         <div className="text-secondary font-avenir-light mb-8 space-y-2 text-[18px]">
                             <p>2nd Floor, Plot no A-41,</p>
                             <p>Sector- 62, Noida 201301</p>
-                            <a href="mailto:admin@nexus.com" className="block hover:text-primary transition-colors">
-                                admin@nexus.com
+                            <a href="mailto:admin@aipoof.co.in" className="block hover:text-primary transition-colors">
+                                admin@aipoof.co.in
                             </a>
                         </div>
 
-                        <div className="flex gap-4">
-                            <a href="#" className="text-secondary hover:text-primary transition-colors">
-                                <Linkedin size={24} />
-                            </a>
-                        </div>
+
                     </div>
 
                     {/* Right Form - Line Inputs */}
